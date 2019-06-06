@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Conversor de Numeros</title>
+    <title>Calculadora de Circunferencia,Area y Dimetro</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
@@ -14,27 +14,36 @@
     <div class="container">
         <div class="card text-center ">
             <div class="card-header">
-                Retos Bootcamp 2019 | Reto 2 | Punto 8
+                Retos Bootcamp 2019 | Reto 2 | Punto 9
             </div>
             <div class="card-body">
-                <h2 class="card-title">Conversor de Numero</h2>
+                <h2 class="card-title">
+                    Calculadora de Circunferencia,Area y Diametro
+                </h2>
                 <p class="card-text">
-                    Ingresa un numero de tres digitos como 217..
+                    Ingresa el radio de un circulo...
                 </p>
                 <div class="container center-block">
-                    <label for="masa"><b>Numero: </b></label>
+                    <label for="radio"><b>Radio: </b></label>
                     <div class="input-group mb-3">
-                        <input id="numero" type="text" class="form-control text-center" value="doscientosdiecisiete">
+                        <input id="radio" type="text" class="form-control text-center" placeholder="radio">
                     </div>
-
+                    <label for="masa"><b>¿Que quieres calcualar?: </b></label>
+                    <div class="input-group mb-3 text-center">
+                        <select name="" id="operacion" class="form-control ">
+                            <option value="0">Circunferencia</option>
+                            <option value="1">Area</option>
+                            <option value="2">Diametro</option>
+                        </select>
+                    </div>
                     <a id="Calcular" style="color:white;border-top-width: 1px;margin-top: 10px;"
-                        class="form-control btn btn-lg btn-primary">Convertir</a>
+                        class="form-control btn btn-lg btn-primary">Calcular</a>
                 </div>
 
                 <div class="card text-center">
                     <div class="card-body">
-                        <h4>Conversion:</h4>
-                        <h1 id="number" style="color:goldenrod"></h1>
+                        <h4 id="operacionLabel">Resultado:</h4>
+                        <h1 id="Resultado" style="color:goldenrod"></h1>
                     </div>
                 </div>
 
@@ -46,7 +55,7 @@
     </div>
     </div>
 
-    <script src="./conversorLetrasNumero.js"></script>
+    <script src="./calculoCirculo.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

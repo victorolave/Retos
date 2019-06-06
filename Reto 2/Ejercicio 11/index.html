@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Conversor de Numeros</title>
+    <title>Redondeo de Numero</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
@@ -14,30 +14,29 @@
     <div class="container">
         <div class="card text-center ">
             <div class="card-header">
-                Retos Bootcamp 2019 | Reto 2 | Punto 8
+                Retos Bootcamp 2019 | Reto 2 | Punto 11
             </div>
             <div class="card-body">
-                <h2 class="card-title">Conversor de Numero</h2>
+                <h2 class="card-title">
+                    Redondear numero de cuatro cifras a la centena mas cercana...
+                </h2>
                 <p class="card-text">
-                    Ingresa un numero de tres digitos como 217..
+                    Ingresa un numero de cuatro cifras.
                 </p>
                 <div class="container center-block">
-                    <label for="masa"><b>Numero: </b></label>
+                    <label for="radio"><b>Numero: </b></label>
                     <div class="input-group mb-3">
-                        <input id="numero" type="text" class="form-control text-center" value="doscientosdiecisiete">
+                        <input id="numero" type="text" type="number" class="form-control text-center">
                     </div>
-
-                    <a id="Calcular" style="color:white;border-top-width: 1px;margin-top: 10px;"
+                    <a id="Convertir" style="color:white;border-top-width: 1px;margin-top: 10px;"
                         class="form-control btn btn-lg btn-primary">Convertir</a>
                 </div>
-
                 <div class="card text-center">
                     <div class="card-body">
-                        <h4>Conversion:</h4>
-                        <h1 id="number" style="color:goldenrod"></h1>
+                        <h4 id="operacionLabel">Resultado:</h4>
+                        <h1 id="Resultado" style="color:goldenrod"></h1>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="card-footer text-muted">
@@ -46,7 +45,7 @@
     </div>
     </div>
 
-    <script src="./conversorLetrasNumero.js"></script>
+    <script src="./redondeoCentena.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
