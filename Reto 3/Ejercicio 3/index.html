@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Media, Mayor y Menor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="card text-center ">
+            <div class="card-header">
+                Retos Bootcamp 2019 | Reto 3 | Punto 3
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">
+                    Media, Mayor y Menor
+                </h2>
+                <p class="card-text">
+                    Ingrese la cantidad de numeros.
+                </p>
+                <div class="container center-block">
+                    <label for="cantidad"><b>#Numeros:</b></label>
+                    <div class="input-group mb-3">
+                        <input id="cantidad" type="number" class="form-control text-center">
+                    </div>
+                    <a id="definir" style="color:white;border-top-width: 1px;margin-top: 10px;"
+                        class="form-control btn btn-lg btn-primary">Definir</a>
+                </div>
+                <div id = "container" class="container center-block">       
+                    <!-- <label for="radio"><b>Numeros:</b></label>            -->
+                    <div id="inputs" class="input-group mb-3">
+                        <!-- <input id="numero1" type="number" class="form-control text-center"> -->
+                    </div>
+                    <div id="boton">
+                        <!-- <a id="calcular" style="color:white;border-top-width: 1px;margin-top: 10px;"
+                        class="form-control btn btn-lg btn-primary">Calcular</a> -->
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 id="operacionLabel">Resultados:</h4>
+                        <h1 id="media" style="color:goldenrod"></h1>
+                        <h1 id="menor" style="color:goldenrod"></h1>
+                        <h1 id="mayor" style="color:goldenrod"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            Victor Rene Olave
+        </div>
+    </div>
+    </div>
+
+    <script src="./mediaMayorMenor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
