@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Numero minimo de Billetes y Monedas</title>
+    <title>Salario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
@@ -14,26 +14,31 @@
     <div class="container">
         <div class="card text-center ">
             <div class="card-header">
-                Retos Bootcamp 2019 | Reto 2 | Punto 17
+                Retos Bootcamp 2019 | Reto 2 | Punto 16
             </div>
             <div class="card-body">
                 <h2 class="card-title">
-                    Numero minimo de Billetes y Monedas
+                    Salario
                 </h2>
                 <p class="card-text">
-                    Ingrese una cantidad en pesos, para definir cual es la cantidad minima de billetes que necesita.
+                    Ingrese las horas trabajadas y el precio de cada una.
                 </p>
                 <div class="container center-block">
-                    <label for="radio"><b>Cantidad: </b></label>
+                    <label for="horas"><b>Horas: </b></label>
                     <div class="input-group mb-3">
-                        <input id="cantidad" type="number" class="form-control text-center">
+                        <input id="horas" type="number" class="form-control text-center">
                     </div>
-                    <a id="Determinar" style="color:white;border-top-width: 1px;margin-top: 10px;"
-                        class="form-control btn btn-lg btn-primary">Determinar</a>
+                    <label for="precio"><b>Precio: </b></label>
+                    <div class="input-group mb-3">
+                        <input id="precio" type="number" class="form-control text-center">
+                    </div>
+                    <a id="Calcular" style="color:white;border-top-width: 1px;margin-top: 10px;"
+                        class="form-control btn btn-lg btn-primary">Calcular</a>
                 </div>
                 <div class="card text-center">
                     <div class="card-body">
-                        <h1 id="Resultado" style="color:goldenrod"></h1>
+                        <h1 id="salario" style="color:goldenrod"></h1>
+                        <h1 id="impuesto" style="color:goldenrod"></h1>
                     </div>
                 </div>
             </div>
@@ -44,7 +49,7 @@
     </div>
     </div>
 
-    <script src="./billetesMonedas.js"></script>
+    <script src="./salario.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -1,34 +1,55 @@
-var boton = document.getElementById("").addEventListener("click", ejecutar, false);
-
-var b_2000;
-var b_5000;
-var b_10000;
-var b_20000;
-var b_50000;
-var b_100000;
-
-var m_50;
-var m_100;
-var m_200;
-var m_500;
-var m_1000;
+var boton = document.getElementById("Determinar").addEventListener("click", ejecutar, false);
 
 var billetes;
-var monedas;
 
 function ejecutar()
 {
+    var cantidad = parseInt(document.getElementById("cantidad").value);
 
+    document.getElementById("Resultado").innerHTML = "Cantidad de billetes de " + determinar(cantidad);
 }
 
 function determinar(cantidad)
 {
-    if(cantidad > 0)
+    if(cantidad > 0 && cantidad < 2000)
     {
-        
+        billetes = "mil = " + cantidad / 1000;
+        return billetes;          
     }
-    else
+    
+    if(cantidad >= 2000 && cantidad < 5000)
     {
+        billetes = "dosmil = " +cantidad / 2000;
+        return billetes;          
+    }
 
+    if(cantidad >= 5000 && cantidad < 10000)
+    {
+        billetes = "cincomil = " + cantidad / 5000;
+        return billetes;          
+    }
+
+    if(cantidad >= 10000 && cantidad < 20000)
+    {
+        billetes = "diesmil = " + cantidad / 10000;
+        return billetes;          
+    }
+
+    if(cantidad >= 20000 && cantidad < 50000)
+    {
+        billetes = "veintemil = " + cantidad / 20000;
+        return billetes;          
+    }
+
+    if(cantidad >= 50000 && cantidad < 100000)
+    {
+        billetes = "cincuentamil = " + cantidad / 50000;
+        return billetes;          
+    }
+
+    if(cantidad >= 100000)
+    {
+        billetes = "cienmil = " + cantidad / 100000;
+        return billetes;          
     }
 }
