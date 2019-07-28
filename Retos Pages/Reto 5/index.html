@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Phone Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/materia/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container" id="app">
+      <div>
+        <img
+          id="img"
+          src="https://cdn.clipart.email/d1bae97d8377ff7b427ec106f636c835_phone-repair-plus-cell-phone-repair-in-ottawa-iphone-repair-in-_295-355.png"
+          alt="PhoneShop"
+          width="200"
+          height="200"
+          aling="center"
+        />
+        <h1 style="text-align: center; font-family: 'Ubuntu', sans-serif;">
+          <strong>PHONE SHOP</strong>
+        </h1>
+      </div>
+      <div id="titulo" class="form-group">
+        <h3 class="">Telefonos Disponibles:</h3>
+        <select
+          id="select"
+          class="form-control"
+          v-model="factura.celularSeleccionado.celular"
+          @change="infoProductoSeleccionado"
+        >
+          <option value="">Seleccione el telefono ....</option>
+          <option v-for="celular in celulares" :value="celular.celular">
+            {{ celular.nombre }}
+          </option>
+        </select>
+      </div>
+
+      <div class="card border-warning mb-3" style="max-width: 100rem;">
+        <div class="card-header" style="font-size: 30px">
+          Información del Telefono
+        </div>
+        <div class="card-body">
+          <p style="font-size: 18px;">
+            <strong style="color: goldenrod">IMEI: </strong>
+            {{ factura.celularSeleccionado.celular || "" }}
+          </p>
+          <p style="font-size: 18px;">
+            <strong style="color: goldenrod">MARCA Y MODELO: </strong>
+            {{ factura.celularSeleccionado.nombre || "" }}
+          </p>
+          <p style="font-size: 18px;">
+            <strong style="color: goldenrod">PRECIO: </strong>
+            {{ factura.celularSeleccionado.precio || "" }}
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="row">
+            <div class="col-md-3">
+              <label style="font-size: 23px">Seleccione la cantidad:</label>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="cantidad"
+                type="number"
+                min="0"
+                v-model="factura.celularSeleccionado.cantidad"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <a
+                style="font-size: 15px; color: white"
+				class="btn btn-block btn-warning"
+				@click="agregarALista"
+                >COMPRAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <table id="" class="table-warning table table-bordered" style="font-size: 20px">
+          <thead>
+            <tr>
+              <th>IMEI</th>
+              <th>PHONE</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Precio Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="(lista, indice) in factura.celularesAgregados">
+              <td>{{ lista.celular }}</td>
+              <td>{{ lista.nombre }}</td>
+              <td>{{ lista.precio }}</td>
+              <td width="100">
+                <input
+                  type="number"
+                  min="1"
+                  class="form-control input-sm"
+                  v-model="lista.cantidad"
+                />
+              </td>
+              <td>{{ lista.cantidad * lista.precio }}</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="5" class="text-left">
+                <strong>SUBTOTAL:</strong>
+                <strong>{{ total }}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-left">
+                <strong>TOTAL(+TAX):</strong>
+                <strong>{{ total | calcularIva }}</strong>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
