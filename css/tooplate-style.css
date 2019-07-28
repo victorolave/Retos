@@ -206,6 +206,10 @@ p {
   text-decoration: none;
 }
 
+.problemas li a {
+  display: block;
+}
+
 #primary-nav li a {
   color: #3a3a3a;
   text-transform: uppercase;
@@ -1076,7 +1080,7 @@ footer .footer-item ul.social-icons li a:hover {
 }
 
 .sub-footer {
-  background-color: #517df0;
+  background-color: #c0203b;
   text-align: center;
 }
 
